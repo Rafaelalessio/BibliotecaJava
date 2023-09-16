@@ -74,6 +74,7 @@ public class Biblioteca {
             System.out.println("Não existe nenhum livro cadastrado.");
             return false;
         } else {
+            System.out.println("Lista de livros cadastrados: ");
             for (int i = 0; i < livrosDisponiveis.size(); i++) {
                 Livro livro = livrosDisponiveis.get(i);
                 System.out.println((i + 1) + " - " + livro.titulo + (livro.emprestado ? " (Emprestado)" : ""));
@@ -83,9 +84,10 @@ public class Biblioteca {
     }
     public boolean consultarUsuario () {
         if (usuariosCadastadros.size() < 1) {
-            System.out.println("Não existe nenhum usuario cadastrado.");
+            System.out.println("Não existe nenhum usuario cadastrado. ");
             return false;
         } else {
+            System.out.println("Lista de usuarios cadastrados: ");
             for (int i = 0; i < usuariosCadastadros.size(); i++) {
                 Usuario usuario = usuariosCadastadros.get(i);
                 System.out.println((i + 1) + " - " + usuario.nome);
